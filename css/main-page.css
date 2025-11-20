@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+}
+
+/* Composición versión web */
+
+header {
+    position: relative;
+    padding: 20px;
+    background-image: url(/resources/dark_wood_background.jpg);
+    background-size: cover;
+    background-color: #333;
+}
+
+#header-ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#header-ul li {
+    text-align: center;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.690), transparent);
+    z-index: -1;
+}
+
+/* Estilo de componentes y elementos*/
+
+#header-ul li img {
+    max-height: 64px;
+    width: auto;
+}
+
+#menu-extend {
+    height: 32px;
+    width: auto;
+}
