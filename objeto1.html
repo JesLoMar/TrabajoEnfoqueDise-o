@@ -52,37 +52,60 @@
             <li><a href="https://dle.rae.es/servicio" target="_blank">Servicios</a></li>
         </ul>
     </nav>
-    <main>
-        <section class="destacados-container">
-            <h1 class="section-title">Destacados de la semana</h1>
 
-            <div class="grid-dos-productos">
-                <article class="producto-hero">
-                    <div class="producto-imagen">
-                        <img src="resources/guitarra_electrica.png" alt="Guitarra Fender Stratocaster">
-                    </div>
-                    <div class="producto-info">
-                        <span class="etiqueta">Oferta Especial</span>
-                        <h2>Guitarra</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="objeto1.html" class="btn-comprar">Ver Detalles</a>
-                    </div>
-                </article>
+    <main class="producto-main">
+        <section class="producto-wrapper">
+            <div class="producto-galeria">
+                <div class="imagen-principal">
+                    <img id="main-img" src="resources/guitarra_clasica.png" alt="Fender Stratocaster Frontal">
+                </div>
+                <div class="miniaturas">
+                    <img src="resources/guitarra_electrica.png" onclick="changeImage(this)" alt="Vista frontal">
+                    <img src="resources/pandereta.png" onclick="changeImage(this)" alt="Vista trasera"> <img
+                        src="resources/guitarra_clasica.png" onclick="changeImage(this)" alt="Detalle pastillas">
+                    <img src="resources/armonica.png" onclick="changeImage(this)" alt="Pala">
+                </div>
+            </div>
 
-                <article class="producto-hero">
-                    <div class="producto-imagen">
-                        <img src="resources/violonchelo.png" alt="Piano Yamaha">
-                    </div>
-                    <div class="producto-info">
-                        <span class="etiqueta novedad">Novedad</span>
-                        <h2>Violonchelo</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="objeto2.html" class="btn-comprar">Ver Detalles</a>
-                    </div>
-                </article>
+            <div class="producto-datos">
+                <h1 class="titulo-producto">Guitarra</h1>
+                <p class="sku">Ref: FND-STRAT-60-SB</p>
+
+                <div class="precio-box">
+                    <span class="precio-antiguo">1.200€</span>
+                    <span class="precio-actual">980€</span>
+                    <span class="etiqueta-oferta">-18%</span>
+                </div>
+
+                <p class="stock-status"><i class="fa fa-check-circle"></i> En Stock (Envío en 24h)</p>
+
+                <p class="descripcion-corta">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+
+                <div class="acciones-compra">
+                    <input type="number" value="1" min="1" max="5">
+                    <button class="btn-anadir">Añadir al Carrito</button>
+                </div>
+
+                <div class="detalles-tecnicos">
+                    <h3>Características Destacadas</h3>
+                    <ul>
+                        <li><strong>Cuerpo:</strong> --- </li>
+                        <li><strong>Mástil:</strong> --- </li>
+                        <li><strong>Diapasón:</strong> --- </li>
+                        <li><strong>Pastillas:</strong> ---</li>
+                        <li><strong>Puente:</strong> --- </li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
+
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-col">
@@ -134,4 +157,12 @@
             <p>&copy; 2025 Vientos del Sur. Todos los derechos reservados, si fuese una web de verdad.</p>
         </div>
     </footer>
+
+    <script>
+        function changeImage(thumbnail) {
+            document.getElementById('main-img').src = thumbnail.src;
+        }
+    </script>
 </body>
+
+</html>
